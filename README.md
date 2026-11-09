@@ -36,50 +36,6 @@ Database: MySQL
 
 Environment: PHP 8.2+
 
-📁 Struktur Direktori Utama
-
-reservasi-padel/
-├── app/
-│   ├── Http/
-│   │   ├── Controllers/
-│   │   │   ├── AuthController.php
-│   │   │   ├── BookingController.php
-│   │   │   └── CourtController.php
-│   │   └── Middleware/
-│   │       └── IsAdmin.php
-│   └── Models/
-│       ├── User.php
-│       ├── Court.php
-│       ├── Booking.php
-│       └── BookingDetail.php
-├── database/
-│   ├── migrations/
-│   │   ├── xxxx_create_courts_table.php
-│   │   ├── xxxx_create_bookings_table.php
-│   │   ├── xxxx_create_booking_details_table.php
-│   │   └── xxxx_add_role_to_users_table.php
-│   └── seeders/
-│       ├── CourtSeeder.php
-│       └── DatabaseSeeder.php
-├── resources/
-│   └── views/
-│       ├── admin/
-│       │   ├── bookings/
-│       │   │   └── index.blade.php
-│       │   └── courts/
-│       ├── auth/
-│       │   ├── login.blade.php
-│       │   └── register.blade.php
-│       ├── booking/
-│       │   ├── create.blade.php
-│       │   └── success.blade.php
-│       ├── layouts/
-│       │   └── app.blade.php
-│       └── home.blade.php
-└── routes/
-    └── web.php
-
-
 🚀 Panduan Instalasi Proyek
 
 Ikuti langkah-langkah berikut untuk menjalankan proyek di komputer lokal Anda:
