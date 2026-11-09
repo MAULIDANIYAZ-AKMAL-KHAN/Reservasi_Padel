@@ -1,4 +1,4 @@
-🎾 Prestige Padel Club - Reservation System
+🎾 Prestige Padel Club - System Reservasi Lapangan Padel
 
 System Reservasi Lapangan Padel Eksklusif berbasis web yang dirancang dengan estetika Ultra-Luxury (Dark Theme & Gold Accent), dilengkapi dengan sistem autentikasi, otorisasi berbasis peran (RBAC / Role-Based Access Control), serta panel manajemen admin yang komprehensif.
 
@@ -130,7 +130,7 @@ Role Admin:
 
 Email: admin@gmail.com
 
-Password: password123 (atau sesuai set up di DatabaseSeeder.php / Tinker)
+Password: password123 (atau sesuai konfigurasi di DatabaseSeeder.php / Tinker)
 
 Role User: Bisa mendaftar secara mandiri melalui menu Register.
 
