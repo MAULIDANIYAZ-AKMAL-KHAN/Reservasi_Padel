@@ -1,12 +1,11 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "api/index.php",
-      "use": "@vercel/php",
-      "config": { "runtime": "8.2" }
+  "public": false,
+  "functions": {
+    "api/index.php": {
+      "maxDuration": 60
     }
-  ],
+  },
   "routes": [
     { "src": "/css/(.*)", "dest": "/public/css/$1" },
     { "src": "/js/(.*)", "dest": "/public/js/$1" },
