@@ -1,6 +1,5 @@
 {
   "version": 2,
-  "public": false,
   "functions": {
     "api/index.php": {
       "maxDuration": 60
