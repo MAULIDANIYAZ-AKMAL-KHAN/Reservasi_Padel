@@ -1,59 +1,157 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+🎾 Prestige Padel Club - Reservation System
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+System Reservasi Lapangan Padel Eksklusif berbasis web yang dirancang dengan estetika Ultra-Luxury (Dark Theme & Gold Accent), dilengkapi dengan sistem autentikasi, otorisasi berbasis peran (RBAC / Role-Based Access Control), serta panel manajemen admin yang komprehensif.
 
-## About Laravel
+✨ Fitur Utama
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+🌟 Sisi Pelanggan (Customer / Guest)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Luxury Aesthetic & Splash Screen: Desain eksklusif bertema hitam legam (#0a0a0a) dan aksen emas (#D4AF37) dilengkapi dengan animasi pembuka splash screen berdurasi 5 detik.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Katalog Lapangan Padel: Menampilkan pilihan arena padel (Indoor, Outdoor, Panoramic) beserta harga, fasilitas, dan deskripsi detail.
 
-## Learning Laravel
+Form Reservasi Online: Kemudahan memesan lapangan padel dengan pemilihan tanggal dan durasi waktu secara dinamis.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+Invoice & Status Booking: Ringkasan konfirmasi reservasi beserta rincian biaya dan status pembayaran.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+🛡️ Sisi Admin (Admin Panel & Security)
 
-## Laravel Sponsors
+Role-Based Access Control (RBAC): Proteksi rute menggunakan custom middleware IsAdmin untuk memisahkan hak akses user dan admin secara ketat.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+Dynamic Navigation Bar: Tombol khusus "Kelola Booking" hanya akan muncul di navbar secara otomatis jika akun yang terautentikasi memiliki peran admin.
 
-### Premium Partners
+Manajemen Reservasi: Mengubah status transaksi secara langsung (Pending, Lunas, Batal).
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+Manajemen Katalog Arena: Fitur CRUD (Create, Read, Update, Delete) untuk mengelola data lapangan padel.
 
-## Contributing
+🛠️ Spesifikasi Teknologi (Tech Stack)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Framework Back-End: Laravel 12
 
-## Code of Conduct
+Front-End Styling: Tailwind CSS (CDN / Vite)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Typography: Google Fonts (Playfair Display & Inter)
 
-## Security Vulnerabilities
+Database: MySQL
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Environment: PHP 8.2+
 
-## License
+📁 Struktur Direktori Utama
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+reservasi-padel/
+├── app/
+│   ├── Http/
+│   │   ├── Controllers/
+│   │   │   ├── AuthController.php
+│   │   │   ├── BookingController.php
+│   │   │   └── CourtController.php
+│   │   └── Middleware/
+│   │       └── IsAdmin.php
+│   └── Models/
+│       ├── User.php
+│       ├── Court.php
+│       ├── Booking.php
+│       └── BookingDetail.php
+├── database/
+│   ├── migrations/
+│   │   ├── xxxx_create_courts_table.php
+│   │   ├── xxxx_create_bookings_table.php
+│   │   ├── xxxx_create_booking_details_table.php
+│   │   └── xxxx_add_role_to_users_table.php
+│   └── seeders/
+│       ├── CourtSeeder.php
+│       └── DatabaseSeeder.php
+├── resources/
+│   └── views/
+│       ├── admin/
+│       │   ├── bookings/
+│       │   │   └── index.blade.php
+│       │   └── courts/
+│       ├── auth/
+│       │   ├── login.blade.php
+│       │   └── register.blade.php
+│       ├── booking/
+│       │   ├── create.blade.php
+│       │   └── success.blade.php
+│       ├── layouts/
+│       │   └── app.blade.php
+│       └── home.blade.php
+└── routes/
+    └── web.php
+
+
+🚀 Panduan Instalasi Proyek
+
+Ikuti langkah-langkah berikut untuk menjalankan proyek di komputer lokal Anda:
+
+1. Clone Repositori & Masuk ke Folder Proyek
+
+git clone https://github.com/username/reservasi-padel.git
+cd reservasi-padel
+
+
+2. Install Dependensi PHP via Composer
+
+composer install
+
+
+3. Konfigurasi File Environment .env
+
+Salin file .env.example menjadi .env:
+
+cp .env.example .env
+
+
+Buka file .env dan atur konfigurasi database MySQL Anda:
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=db_reservasi_padel
+DB_USERNAME=root
+DB_PASSWORD=
+
+
+4. Generate Application Key
+
+php artisan key:generate
+
+
+5. Eksekusi Migrasi & Database Seeder
+
+Jalankan perintah ini untuk membuat tabel basis data beserta data awal master lapangan dan akun admin:
+
+php artisan migrate:fresh --seed
+
+
+6. Kredensial Akun Default
+
+Role Admin:
+
+Email: admin@gmail.com
+
+Password: password123 (atau sesuai set up di DatabaseSeeder.php / Tinker)
+
+Role User: Bisa mendaftar secara mandiri melalui menu Register.
+
+7. Jalankan Server Lokal
+
+php artisan serve
+
+
+Akses aplikasi melalui browser di: http://127.0.0.1:8000
+
+🔒 Konfigurasi Keamanan (Middleware & Access Control)
+
+Rute admin diproteksi menggunakan gabungan middleware auth dan admin pada routes/web.php:
+
+Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(function () {
+    Route::resource('courts', CourtController::class);
+    Route::get('/bookings', [BookingController::class, 'adminIndex'])->name('bookings.index');
+    Route::patch('/bookings/{booking}/status', [BookingController::class, 'updateStatus'])->name('bookings.updateStatus');
+});
+
+
+📄 Lisensi
+
+Hak Cipta © 2026 PRESTIGE Padel Club. Seluruh hak cipta dilindungi undang-undang.
